@@ -48,3 +48,19 @@ Counting lines
 - ps
 - ./sleeper.sh & ( stop with ctrl + z )
 - fg 1
+
+# Shell piping
+List all files in directory and count num files and write to outputfile
+- ls -l usr/bin | wc -l > output.txt
+
+Set a variable
+- STR=$'1. This is a line\n2. This is a line\n3. This is a line.'
+Print it and write to file
+- echo "$STR" > lines.txt
+Write out the content of the file and sort in reverse add less to be able to go up/down inthe file
+- cat lines.txt | sort -r | less
+Search for a specific char
+- cat lines.txt | grep 3 
+Append to file
+- echo "something" > append.txt
+- echo "something else" >> append.txt
